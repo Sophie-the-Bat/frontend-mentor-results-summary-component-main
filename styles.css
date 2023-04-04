@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: url(./assets/fonts/static/HankenGrotesk-Medium.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'HankenGrotesk-Bold';
+    src: url(./assets/fonts/static/HankenGrotesk-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'HankenGrotesk-ExtraBold';
+    src: url(./assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+    font-weight: 900;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0;
+}
+
+body {
+    font-family: 'HankenGrotesk', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    --border-radius: 1rem;
+
+   }
+   
+
+.transparency {
+    opacity: 0.75;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-top: 5rem;
+    box-shadow: 10px 5px 10px rgba(17 37 212 / 0.25);
+}
+
+.card {
+    /*based on given value for mobile design */
+    max-width: 375px;
+    width: 375px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    padding-inline: 3rem;
+    border-radius: 1rem;
+}
+
+.card__heading {
+    font-size: 1.5rem;
+    /*padding-bottom: 2rem;*/
+}
+
+.card-result {
+    background-image: linear-gradient(
+        0deg,
+        hsl(241, 81%, 54%), 
+        hsl(252, 100%, 67%));
+    color: white;
+    text-align: center;
+}
+
+.card-result-circle {
+    background-image: linear-gradient(
+        180deg,
+        hsl(241, 81%, 54%), 
+       transparent);
+    border-radius: 999rem;
+    padding: 3.5rem;
+    margin: 1.5rem
+}
+
+.card-result-big-number {
+    font-family: 'HankenGrotesk-ExtraBold';
+    font-size: 5rem;
+}
+
+.card-result-subheading {
+    font-size: 2.5rem;
+    font-family: 'HankenGrotesk-Bold';
+}
+
+.card-result-text {
+    padding: 0.5rem;
+    opacity: 0.75;
+}
+
+.card-summary {
+   /*outline: 2px solid red;*/
+   color: hsl(224, 30%, 27%);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   /*box-shadow: 10px 10px 10px rgba(17 37 212 / 0.25);*/
+}
+
+.card-summary-list {
+  /*  list-style-type: none;*/
+    font-family: 'HankenGrotesk-Bold';
+}
+
+
+.card-summary-list-item {
+    background-color: rgba(var(--list-item-color), 0.15);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin-block: 1.25rem;
+    /*to push items to left and right*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*
+.card-summary-list-item::before {
+    content: "";
+    background-image: var(--list-item-icon);
+    background-size: contain;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: currentColor;
+}
+*/
+
+.card-summary-list-item-left  {
+    /*to center the image on baseline of text*/
+     display: flex;
+
+}
+
+.card-summary-list-item-left:first-child span {
+    color: rgba(var(--list-item-color), 1);
+    margin-left: 0.5em;
+}
+
+.item-reaction {
+    /*hsl(0, 100%, 67%) in rgb*/
+    --list-item-color: 255, 87, 87;
+    /*--list-item-icon: url("./assets/images/icon-reaction.svg");*/
+}
+
+.item-memory {
+    /*hsl(39, 100%, 56%) in rgb*/
+    --list-item-color: 255, 176, 31;
+    /*--list-item-icon: url("./assets/images/icon-memory.svg");*/
+}
+
+.item-verbal {
+    /*hsl(166, 100%, 37%) in rgb*/
+    --list-item-color: 0, 189, 145;
+   /* --list-item-icon: url("./assets/images/icon-verbal.svg");*/
+}
+
+.item-visual {
+    /*hsl(234, 85%, 45%) in rgb*/
+    --list-item-color: 17, 37, 212;
+    /*--list-item-icon: url("./assets/images/icon-visual.svg");*/
+}
+
+.card-summary-button {
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    font-family: 'HankenGrotesk-Bold';
+    font-size: 1.25rem;
+    padding: 0.75rem;
+    border-radius: 1.5rem;
+    width: 100%;
+    border: none;
+}
+
+.card-summary-button:hover {
+    background-image: linear-gradient(
+        0deg,
+        hsl(241, 81%, 54%), 
+        hsl(252, 100%, 67%));
+}
