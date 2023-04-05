@@ -48,6 +48,16 @@ body {
     box-shadow: 10px 5px 10px rgba(17 37 212 / 0.25);
 }
 
+@media (max-width:749px) {
+    .container {
+        max-width: 375px;
+        margin: 0;
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        box-shadow: 0 5px 10px rgba(17 37 212 / 0.25);
+    }
+}
+
+
 .card {
     /*based on given value for mobile design */
     max-width: 375px;
@@ -70,6 +80,13 @@ body {
         hsl(252, 100%, 67%));
     color: white;
     text-align: center;
+}
+
+@media (max-width:749px) {
+    .card-result {
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+    
 }
 
 .card-result-circle {
